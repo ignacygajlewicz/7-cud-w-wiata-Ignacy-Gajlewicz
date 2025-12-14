@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kimi AI">
+    <meta name="keywords" content="mapa, 7 cudów świata, lokalizacje, Google Maps, podróże">
+    <meta name="description" content="Mapa z lokalizacjami 7 cudów świata. Zobacz gdzie znajdują się te wspaniałe zabytki.">
+    <title>Mapa 7 Cudów Świata</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .map-container {
+            margin: 2rem 0;
+            background: rgba(26, 0, 51, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        .map-container h3 {
+            text-align: center;
+            color: #cc99ff;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        
+        #map {
+            height: 500px;
+            border-radius: 10px;
+            border: 2px solid #663399;
+            margin-bottom: 2rem;
+        }
+        
+        .wonder-locations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .location-card {
+            background: rgba(13, 0, 26, 0.5);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid #663399;
+            transition: transform 0.3s ease;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(204, 153, 255, 0.2);
+        }
+        
+        .location-card h4 {
+            color: #e6ccff;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .location-card p {
+            color: #f0e6ff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .coordinates {
+            font-family: monospace;
+            color: #cc99ff;
+            font-size: 0.9rem;
+        }
+        
+        @media screen and (max-width: 600px) {
+            #map {
+                height: 300px;
+            }
+            
+            .wonder-locations {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <h1>7 Cudów Świata</h1>
+    </div>
+
+   
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Otwórz menu nawigacji">
+    <label class="hamburger" for="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="index.html">Strona Główna</a></li>
+        <li><a href="wonders/wonder1.html">Wielki Mur Chiński</a></li>
+        <li><a href="wonders/wonder2.html">Petra</a></li>
+        <li><a href="wonders/wonder3.html">Koloseum</a></li>
+        <li><a href="wonders/wonder4.html">Chichen Itza</a></li>
+        <li><a href="wonders/wonder5.html">Machu Picchu</a></li>
+        <li><a href="wonders/wonder6.html">Taj Mahal</a></li>
+        <li><a href="wonders/wonder7.html">Statua Chrystusa Zbawiciela</a></li>
+        <li><a href="survey.html">Ankieta</a></li>
+        <li><a href="map.html">Mapa</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main>
+        <section class="hero">
+            <h2>Mapa 7 Cudów Świata</h2>
+            <p>Zobacz gdzie na świecie znajdują się te wspaniałe zabytki.</p>
+        </section>
+
+        <section class="map-container">
+            <h3>Lokalizacje 7 Cudów Świata</h3>
+            
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d18432.633955145637!2d-72.5517867388221!3d-13.174113151498556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smachu%20picchu!5e1!3m2!1spl!2spl!4v1765726926549!5m2!1spl!2spl" width="1100" height="495" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <div class="wonder-locations">
+                <div class="location-card">
+                    <h4>1. Wielki Mur Chiński</h4>
+                    <p><strong>Kraj:</strong> Chiny</p>
+                    <p><strong>Region:</strong> Północne Chiny</p>
+                    <p class="coordinates">Współrzędne: 40.4319° N, 116.5704° E</p>
+                </div>
+                
+                <div class="location-card">
+                    <h4>2. Petra</h4>
+                    <p><strong>Kraj:</strong> Jordania</p>
+                    <p><strong>Region:</strong> Południowa Jordania</p>
+                    <p class="coordinates">Współrzędne: 30.3285° N, 35.4444° E</p>
+                </div>
+                
+                <div class="location-card">
+                    <h4>3. Koloseum</h4>
+                    <p><strong>Kraj:</strong> Włochy</p>
+                    <p><strong>Miasto:</strong> Rzym</p>
+                    <p class="coordinates">Współrzędne: 41.8902° N, 12.4922° E</p>
+                </div>
+                
+                <div class="location-card">
+                    <h4>4. Chichen Itza</h4>
+                    <p><strong>Kraj:</strong> Meksyk</p>
+                    <p><strong>Region:</strong> Półwysep Jukatan</p>
+                    <p class="coordinates">Współrzędne: 20.6843° N, 88.5678° W</p>
+                </div>
+                
+                <div class="location-card">
+                    <h4>5. Machu Picchu</h4>
+                    <p><strong>Kraj:</strong> Peru</p>
+                    <p><strong>Region:</strong> Andy, Region Cusco</p>
+                    <p class="coordinates">Współrzędne: 13.1631° S, 72.5450° W</p>
+                </div>
+                
+                <div class="location-card">
+                    <h4>6. Taj Mahal</h4>
+                    <p><strong>Kraj:</strong> Indie</p>
+                    <p><strong>Miasto:</strong> Agra</p>
+                    <p class="coordinates">Współrzędne: 27.1751° N, 78.0421° E</p>
+                </div>
+                
+                <div class="location-card">
+                    <h4>7. Statua Chrystusa Zbawiciela</h4>
+                    <p><strong>Kraj:</strong> Brazylia</p>
+                    <p><strong>Miasto:</strong> Rio de Janeiro</p>
+                    <p class="coordinates">Współrzędne: 22.9519° S, 43.2105° W</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Autor: Ignacy Gajlewicz</p>
+            <p>Klasa: 2tb</p>
+            <p>&copy; 2025 7 Cudów Świata. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+   
+
+
+
+</body>
+</html>

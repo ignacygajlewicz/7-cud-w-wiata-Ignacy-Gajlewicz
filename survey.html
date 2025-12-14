@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kimi AI">
+    <meta name="keywords" content="ankieta, 7 cudów świata, opinia, podróże, turystyka">
+    <meta name="description" content="Ankieta o 7 cudach świata. Podziel się swoją opinią na temat tych wspaniałych zabytków.">
+    <title>Ankieta - 7 Cudów Świata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+    <div class="logo">
+      <h1>7 Cudów Świata</h1>
+    </div>
+
+   
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Otwórz menu nawigacji">
+    <label class="hamburger" for="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="index.html">Strona Główna</a></li>
+        <li><a href="wonders/wonder1.html">Wielki Mur Chiński</a></li>
+        <li><a href="wonders/wonder2.html">Petra</a></li>
+        <li><a href="wonders/wonder3.html">Koloseum</a></li>
+        <li><a href="wonders/wonder4.html">Chichen Itza</a></li>
+        <li><a href="wonders/wonder5.html">Machu Picchu</a></li>
+        <li><a href="wonders/wonder6.html">Taj Mahal</a></li>
+        <li><a href="wonders/wonder7.html">Statua Chrystusa Zbawiciela</a></li>
+        <li><a href="survey.html">Ankieta</a></li>
+        <li><a href="map.html">Mapa</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main>
+        <section class="hero">
+            <h2>Ankieta o 7 Cudach Świata</h2>
+            <p>Podziel się swoją opinią na temat tych wspaniałych zabytków świata!</p>
+        </section>
+
+        <section class="survey-section">
+            <form id="surveyForm" class="survey-form">
+                <div class="form-group">
+                    <h3>1. Dane osobowe</h3>
+                    <label for="name">Imię i nazwisko:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="age">Wiek:</label>
+                    <input type="number" id="age" name="age" min="10" max="120" required>
+                    
+                    <label for="email">Adres e-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <h3>2. Który z 7 cudów świata najbardziej Cię interesuje?</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="favoriteWonder" value="great-wall" required> Wielki Mur Chiński</label>
+                        <label><input type="radio" name="favoriteWonder" value="petra"> Petra</label>
+                        <label><input type="radio" name="favoriteWonder" value="colosseum"> Koloseum</label>
+                        <label><input type="radio" name="favoriteWonder" value="chichen-itza"> Chichen Itza</label>
+                        <label><input type="radio" name="favoriteWonder" value="machu-picchu"> Machu Picchu</label>
+                        <label><input type="radio" name="favoriteWonder" value="taj-mahal"> Taj Mahal</label>
+                        <label><input type="radio" name="favoriteWonder" value="christ-redeemer"> Statua Chrystusa Zbawiciela</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>3. Ile cudów świata odwiedziłeś/aś?</h3>
+                    <select name="visitedCount" required>
+                        <option value="">-- wybierz --</option>
+                        <option value="0">Żadnego</option>
+                        <option value="1">1 cud</option>
+                        <option value="2">2 cuda</option>
+                        <option value="3">3 cuda</option>
+                        <option value="4">4 cuda</option>
+                        <option value="5">5 cudów</option>
+                        <option value="6">6 cudów</option>
+                        <option value="7">Wszystkie 7 cudów</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3>4. Które cuda chciałbyś/chciałabyś odwiedzić w przyszłości? (można zaznaczyć wiele)</h3>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="futureVisits" value="great-wall"> Wielki Mur Chiński</label>
+                        <label><input type="checkbox" name="futureVisits" value="petra"> Petra</label>
+                        <label><input type="checkbox" name="futureVisits" value="colosseum"> Koloseum</label>
+                        <label><input type="checkbox" name="futureVisits" value="chichen-itza"> Chichen Itza</label>
+                        <label><input type="checkbox" name="futureVisits" value="machu-picchu"> Machu Picchu</label>
+                        <label><input type="checkbox" name="futureVisits" value="taj-mahal"> Taj Mahal</label>
+                        <label><input type="checkbox" name="futureVisits" value="christ-redeemer"> Statua Chrystusa Zbawiciela</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>5. Jak oceniasz swoją wiedzę o 7 cudach świata?</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="knowledgeLevel" value="excellent" required> Bardzo dobra</label>
+                        <label><input type="radio" name="knowledgeLevel" value="good"> Dobra</label>
+                        <label><input type="radio" name="knowledgeLevel" value="average"> Przeciętna</label>
+                        <label><input type="radio" name="knowledgeLevel" value="poor"> Słaba</label>
+                        <label><input type="radio" name="knowledgeLevel" value="none"> Żadna</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>6. Jakie źródła informacji wykorzystujesz do nauki o 7 cudach świata? (można zaznaczyć wiele)</h3>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="infoSources" value="internet"> Internet</label>
+                        <label><input type="checkbox" name="infoSources" value="books"> Książki</label>
+                        <label><input type="checkbox" name="infoSources" value="tv"> Telewizja</label>
+                        <label><input type="checkbox" name="infoSources" value="school"> Szkoła</label>
+                        <label><input type="checkbox" name="infoSources" value="travel"> Własne podróże</label>
+                        <label><input type="checkbox" name="infoSources" value="friends"> Opowieści znajomych</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>7. Ile byłbyś/byłabyś skłonny/a wydać na podróż do jednego z 7 cudów świata?</h3>
+                    <select name="budget" required>
+                        <option value="">-- wybierz --</option>
+                        <option value="under-1000">Poniżej 1000 zł</option>
+                        <option value="1000-3000">1000 - 3000 zł</option>
+                        <option value="3000-5000">3000 - 5000 zł</option>
+                        <option value="5000-10000">5000 - 10000 zł</option>
+                        <option value="over-10000">Powyżej 10000 zł</option>
+                        <option value="no-limit">Nie mam limitu</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3>8. Twoje komentarze i sugestie</h3>
+                    <label for="comments">Co sądzisz o naszej stronie o 7 cudach świata? Jakie masz uwagi lub sugestie?</label>
+                    <textarea id="comments" name="comments" rows="5" placeholder="Wpisz swoje komentarze tutaj..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <h3>9. Czy chciałbyś/chciałabyś otrzymywać informacje o nowościach na naszej stronie?</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="newsletter" value="yes" required> Tak</label>
+                        <label><input type="radio" name="newsletter" value="no"> Nie</label>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="submit-btn">Wyślij ankietę</button>
+                    <button type="reset" class="reset-btn">Wyczyść formularz</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="results-section" id="results" style="display: none;">
+            <h3>Podsumowanie Twoich odpowiedzi</h3>
+            <div id="resultsContent"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Autor: Ignacy Gajlewicz</p>
+            <p>Klasa: 2tb</p>
+            <p>&copy; 2025 7 Cudów Świata. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
